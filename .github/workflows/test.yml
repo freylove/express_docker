@@ -25,6 +25,6 @@ jobs:
       - name: Logearnos en GHCR
         run: echo "${{ secrets.TOKEN }}" | docker login ghcr.io -u freylove --password-stdin
       - name: Crear imagen
-        run: docker build . -t ghcr.io/lokcito/express-image:latest
+        run: docker build . -t ghcr.io/freylove/express-image:latest
       - name: Desplegar imagen
         run: docker push ghcr.io/freylove/express-image:latest
